@@ -1,0 +1,124 @@
+<html>
+<head><title></title>
+  <link type="text/css" rel="stylesheet" href="styles.css"/>
+  <link href='dist/dragula.css' rel='stylesheet' type='text/css' />
+  <link href='dist/dragula.min.css' rel='stylesheet' type='text/css' />
+</head>
+<style>
+table {
+  border: none;
+
+}
+td {
+  padding: 0;
+}
+/*.match {
+  background-color: green;
+}
+.nomatch {
+	background-color: red;
+}*/
+</style>
+<body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/$VERSION/dragula.min.js'></script>
+  <h1>OWLS</h1>
+
+  <div id='sortable' class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+  </div>
+  <table align="left" border="0">
+    <tr>
+      <td rowspan="3">
+        <div id="canvas-container">
+          <canvas id="canvas" width="300" height="300" style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+          </div>
+        </td>
+
+        <td><img src="card1medium.jpg" alt="card1medium"></td>
+        <td><img src="card2medium.jpg" alt="card2medium"></td>
+        <td><img src="card3medium.jpg" alt="card3medium"></td>
+      </tr>
+      <tr>
+        <td><img src="card4medium.jpg" alt="card4medium"></td>
+        <td><img src="card5medium.jpg" alt="card5medium"></td>
+        <td><img src="card6medium.jpg" alt="card6medium"></td>
+      </tr>
+      <tr>
+        <td><img src="card7medium.jpg" alt="card7medium"></td>
+        <td><img src="card8medium.jpg" alt="card8medium"></td>
+        <td><img src="card9medium.jpg" alt="card9medium"></td>
+      </tr>
+
+    </table>
+    <table border=1 width="600px" align="left">
+      <tr>
+        <tr>
+          <td rowspan="100%" width="300px">
+            <table border=1 width="300px">
+              <tr align="center"><td><p>Card</p></td><td><p>PosX</p></td><td><p>PosY</p></td><td><p>Rotation</p></td></tr>
+              <tr align="center"><td><p id="nr1">x</p></td><td><p id="px1">x</p></td><td><p id="py1">x</p></td><td><p id="r1">x</p></td></tr>
+              <tr align="center"><td><p id="nr2">x</p></td><td><p id="px2">x</p></td><td><p id="py2">x</p></td><td><p id="r2">x</p></td></tr>
+              <tr align="center"><td><p id="nr3">x</p></td><td><p id="px3">x</p></td><td><p id="py3">x</p></td><td><p id="r3">x</p></td></tr>
+              <tr align="center"><td><p id="nr4">x</p></td><td><p id="px4">x</p></td><td><p id="py4">x</p></td><td><p id="r4">x</p></td></tr>
+              <tr align="center"><td><p id="nr5">x</p></td><td><p id="px5">x</p></td><td><p id="py5">x</p></td><td><p id="r5">x</p></td></tr>
+              <tr align="center"><td><p id="nr6">x</p></td><td><p id="px6">x</p></td><td><p id="py6">x</p></td><td><p id="r6">x</p></td></tr>
+              <tr align="center"><td><p id="nr7">x</p></td><td><p id="px7">x</p></td><td><p id="py7">x</p></td><td><p id="r7">x</p></td></tr>
+              <tr align="center"><td><p id="nr8">x</p></td><td><p id="px8">x</p></td><td><p id="py8">x</p></td><td><p id="r8">x</p></td></tr>
+              <tr align="center"><td><p id="nr9">x</p></td><td><p id="px9">x</p></td><td><p id="py9">x</p></td><td><p id="r9">x</p></td></tr>
+            </table>
+            <table border=1 width="300px">
+              <tr align="center"><td><p>match case</p></td><td><p>card nr 1</p></td><td><p>card nr 2</p></td></tr>
+              <tr align="center"><td><p>1</p></td><td><p id="c11">x</p></td><td><p id="c12">x</p></td></tr>
+              <tr align="center"><td><p>2</p></td><td><p id="c21">x</p></td><td><p id="c22">x</p></td></tr>
+              <tr align="center"><td><p>3</p></td><td><p id="c31">x</p></td><td><p id="c32">x</p></td></tr>
+              <tr align="center"><td><p>4</p></td><td><p id="c41">x</p></td><td><p id="c42">x</p></td></tr>
+              <tr align="center"><td><p>5</p></td><td><p id="c51">x</p></td><td><p id="c52">x</p></td></tr>
+              <tr align="center"><td><p>6</p></td><td><p id="c61">x</p></td><td><p id="c62">x</p></td></tr>
+              <tr align="center"><td><p>7</p></td><td><p id="c71">x</p></td><td><p id="c72">x</p></td></tr>
+              <tr align="center"><td><p>8</p></td><td><p id="c81">x</p></td><td><p id="c82">x</p></td></tr>
+              <tr align="center"><td><p>9</p></td><td><p id="c91">x</p></td><td><p id="c92">x</p></td></tr>
+              <tr align="center"><td><p>10</p></td><td><p id="c101">x</p></td><td><p id="c102">x</p></td></tr>
+              <tr align="center"><td><p>11</p></td><td><p id="c111">x</p></td><td><p id="c112">x</p></td></tr>
+              <tr align="center"><td><p>12</p></td><td><p id="c121">x</p></td><td><p id="c122">x</p></td></tr>
+            </table>
+          </td>
+          <tr>
+            <td> <p>currentCard: </p></td><td><p id="currentCard">0</p> </td>
+            <td> <p>Iterations: </p></td><td><p id="loopturns">0</p> </td>
+          </tr>
+          <tr>
+            <td> <p>Local iteration: </p></td><td><p id="match">0</p> </td>
+            <td> <p>Values checked: </p></td><td><p id="checkValues">0</p> </td>
+          </tr>
+          <tr>
+            <tr align="center"><td><p>Compare number</p></td><td><p>mate</p></td><td><p>Deg compare one</p></td><td><p>Deg compare two</p></td></tr>
+            <tr id="m"><td><p>1: </p></td><td><p id="mate">false</p></td><td><p id="degone"> x </p></td><td><p id="degtwo"> x </p></td></tr>
+            <tr id="m1"><td><p>2: </p></td><td><p id="mate1">false</p></td><td><p id="degone1"> x </p></td><td><p id="degtwo1"> x </p></td></tr>
+            <tr id="m2"><td><p>3: </p></td><td><p id="mate2">false</p></td><td><p id="degone2"> x </p></td><td><p id="degtwo2"> x </p></td></tr>
+            <tr id="m3"><td><p>4: </p></td><td><p id="mate3">false</p></td><td><p id="degone3"> x </p></td><td><p id="degtwo3"> x </p></td></tr>
+            <tr id="m4"><td><p>5: </p></td><td><p id="mate4">false</p></td><td><p id="degone4"> x </p></td><td><p id="degtwo4"> x </p></td></tr>
+            <tr id="m5"><td><p>6: </p></td><td><p id="mate5">false</p></td><td><p id="degone5"> x </p></td><td><p id="degtwo5"> x </p></td></tr>
+            <tr id="m6"><td><p>7: </p></td><td><p id="mate6">false</p></td><td><p id="degone6"> x </p></td><td><p id="degtwo6"> x </p></td></tr>
+            <tr id="m7"><td><p>8: </p></td><td><p id="mate7">false</p></td><td><p id="degone7"> x </p></td><td><p id="degtwo7"> x </p></td></tr>
+            <tr id="m8"><td><p>9: </p></td><td><p id="mate8">false</p></td><td><p id="degone8"> x </p></td><td><p id="degtwo8"> x </p></td></tr>
+            <tr id="m9"><td><p>10: </p></td><td><p id="mate9">false</p></td><td><p id="degone9"> x </p></td><td><p id="degtwo9"> x </p></td></tr>
+            <tr id="m10"><td><p>11: </p></td><td><p id="mate10">false</p></td><td><p id="degone10"> x </p></td><td><p id="degtwo10"> x </p></td></tr>
+            <tr id="m11"><td><p>12: </p></td><td><p id="mate11">false</p></td><td><p id="degone11"> x </p></td><td><p id="degtwo11"> x </p></td></tr>
+          </tr>
+        </table>
+
+
+        <script src="app3.js"></script>
+        <script src='dist/dragula.js'></script>
+        <script src='example/example.min.js'></script>
+      </body>
+      </html>

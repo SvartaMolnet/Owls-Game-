@@ -1,0 +1,114 @@
+#container-canvas {
+  position: relative;
+}
+#container-canvas canvas, .grid-container {
+  position: absolute;
+}
+canvas {
+  border: 1px solid black;
+}
+.grid-container {
+	padding: 2px 0 0 2px;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: auto auto auto;
+  /*background-color: #2196F3;*/
+	opacity: 0.5;
+}
+.grid-container > div,
+.gu-mirror {
+
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.4s ease-in-out;
+}
+.grid-container > div {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.gu-mirror {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+.grid-container .ex-moved {
+  background-color: #e74c3c;
+}
+.grid-container.ex-over {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.grid-item {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+	opacity: 1;
+	line-height: 100px;
+  font-size: 30px;
+	width: 100px;
+  text-align: center;
+	transition: 0.3s;
+}
+.grid-item:hover {
+  opacity: 1;
+	/*background-color: #3e8e41;*/
+}
+.match {
+  background-color: green;
+}
+.nomatch {
+	background-color: red;
+}
+#m {
+  color: black;
+  background-color: yellow;
+}
+#m1 {
+  color: black;
+  background-color: yellow;
+}
+#m2 {
+  color: black;
+  background-color: yellow;
+}
+#m3 {
+  color: black;
+  background-color: yellow;
+}
+#m4 {
+  color: black;
+  background-color: yellow;
+}
+#m5 {
+  color: black;
+  background-color: yellow;
+}
+#m6 {
+  color: black;
+  background-color: yellow;
+}
+#m7 {
+  color: black;
+  background-color: yellow;
+}
+#m8 {
+  color: black;
+  background-color: yellow;
+}
+#m9 {
+  color: black;
+  background-color: yellow;
+}
+#m10 {
+  color: black;
+  background-color: yellow;
+}
+#m11 {
+  color: black;
+  background-color: yellow;
+}
